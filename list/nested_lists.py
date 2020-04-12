@@ -1,6 +1,7 @@
 if __name__ == '__main__':
 
     students = [['Harry', 37.21], ['Berry', 37.21], ['Tina', 37.2], ['Akriti', 41], ['Harsh', 39]]
+    
     #for _ in range(int(input())):
         #name = input()
         #score = float(input())
@@ -12,6 +13,7 @@ if __name__ == '__main__':
 
     min_score = min(list(map(lambda x: x[1], new_list_students)))
 
-    for student in sorted(new_list_students):
-        if student[1] == min_score:
-            print(student[0])
+    second_students = [student[0] for student in new_list_students if student[1] == min_score]
+
+    for student in sorted(second_students):
+        print(student)
